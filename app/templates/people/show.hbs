@@ -1,6 +1,6 @@
 <h2>Friends of {{model.name}}</h2>
 <ul>
-  {{#each model.friendships as |friendship|}}
-    <li>{{friendship.friender.name}} - {{friendship.friended.name}} - {{friendship.strength}}</li>
+  {{#each friendships as |friendship|}}
+    <li>{{friendship.friend.name}} - {{friendship.strength}}</li>
   {{/each}}
 </ul>
