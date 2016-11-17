@@ -3,6 +3,6 @@ import Model from 'ember-data/model';
 
 export default Model.extend({
   strength: DS.attr('number'),
-  friender: DS.belongsTo('person', { inverse: 'frienderFriendships' }),
-  friended: DS.belongsTo('person', { inverse: 'friendedFriendships' }),
+  friender: DS.belongsTo('person', { async: false, inverse: 'frienderFriendships' }),
+  friended: DS.belongsTo('person', { async: false, inverse: 'friendedFriendships' }),
 });
