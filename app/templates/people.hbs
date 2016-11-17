@@ -1,10 +1,11 @@
 <div class="col-md-4">
-  <ul>
+  <div class="list-group">
     {{#each model as |person|}}
-      <li>{{link-to person.name 'people.show' person}}</li>
+      {{link-to person.name 'people.show' person class="list-group-item"}}
     {{/each}}
-  </ul>
+  </div>
 </div>
 <div class="col-md-8">
   {{outlet}}
 </div>
+

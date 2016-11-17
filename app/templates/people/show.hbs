@@ -1,6 +1,21 @@
-<h2>Friends of {{model.name}}</h2>
-<ul>
-  {{#each friendships as |friendship|}}
-    <li>{{friendship.friend.name}} - {{friendship.strength}}</li>
-  {{/each}}
-</ul>
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h3 class="panel-title">Friends of {{model.name}}</h3>
+  </div>
+  <div class="panel-body">
+    {{#if friendships.length}}
+      <ul class="friend-list">
+        {{#each friendships as |friendship|}}
+          <li class="friend-list-item">
+            <span class="name">{{friendship.friend.name}}</span>
+            <span class="badge">{{friendship.strength}}</span>
+          </li>
+        {{/each}}
+      </ul>
+    {{else}}
+      <div class="empty-list">
+        <p class="empty-message">{{model.name}} has no friends :(</p>
+      </div>
+    {{/if}}
+  </div>
+</div>
